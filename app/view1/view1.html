@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Vehicle</title>
+
+    <script src="//code.angularjs.org/1.7.2/angular.min.js"></script>
+    <script src="js/modules/promise-tracker.js"></script>
+</head>
+
+<body ng-app="myApp">
+<a href="../index.html"> Home</a>
+<a href="../view2/view2.html"> View Vehicle</a>
+<div data-ng-controller="VehicleController">
+
+    <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+    <div id="addVechicle">
+        <p> Please fill in the necessary details </p>
+        <form name="addVehicleForm" novalidate role="form">
+            <div class="form-group">
+                <label>Vehicle Make: <input type="text" data-ng-model="user.name"/></label><br />
+            </div>
+            <div class="form-group">
+                <label>Registraion: <input type="text" data-ng-model="user.reg"/></label><br />
+            </div>
+            <div class="form-group">
+                <label>Lat: <input type="text" data-ng-model="user.lat"/></label><br />
+            </div>
+            <div class="form-group">
+                <label>Ing: <input type="text" data-ng-model="user.ing"/></label><br />
+            </div>
+            <input type="button" ng-click="reset()" value="Reset"/>
+            <input type="button" ng-click="submit(vehicle)" value="Submit"/>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
